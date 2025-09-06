@@ -38,7 +38,7 @@ df_tx_gold.show()
 from pyspark.sql import functions as F
 
 # Ultima fecha como hito de referencia
-cutoff_date = df_transactions_data_s.agg(F.max("date")).collect()[0][0]
+cutoff_date = df_transactions_data_g.agg(F.max("date")).collect()[0][0]
 
 df_cards_gold = (
     df_cards_data_g
